@@ -120,11 +120,11 @@ def compare(nh3,temp,pH,S):
     print "Ammonia Toxicity Direct Comparison to published table in"
     print " 1989 National Criteria."
     print "input   values:"
-    print "  %s ° C , %s pH, %s PPT Salinity" % (temp,pH,S)
+    print "  %s DEG C , %s pH, %s PPT Salinity" % (temp,pH,S)
     print "compare values:"
-    print "  %s ° C , %s pH, %s PPT Salinity" % (round5(temp),roundPt2(pH),\
+    print "  %s DEG C , %s pH, %s PPT Salinity" % (round5(temp),roundPt2(pH),\
     round10(S))
-    '''print "compare values %s ° C , %s pH, %s PPT Salinity" % (int(math.ceil
+    '''print "compare values %s DEG C , %s pH, %s PPT Salinity" % (int(math.ceil
     (temp/5)*5),float(math.ceil(pH/0.2)*0.2),int(math.ceil(S/10)*10))'''
     compareTemp=round5(temp)
     comparepH=roundPt2(pH)
@@ -197,11 +197,11 @@ def both(nh3,temp,pH,S):
     accuteTable=AmmoniaToxSaline[compareSalinity,compareTemp,comparepH]
     table=nh3<accuteTable
     
-    print "input       %s    mg/L NH3  values %s ° C , %s pH, %s PPT Salinity" \
+    print "input       %s    mg/L NH3  values %s DEG C , %s pH, %s PPT Salinity" \
     % (nh3,temp,pH,S)
-    print "table       %s    mg/L NH3  values %s ° C , %s pH, %s PPT Salinity  \
+    print "table       %s    mg/L NH3  values %s DEG C , %s pH, %s PPT Salinity  \
     Pass  %s" % (accuteTable,compareTemp,comparepH,compareSalinity,table)
-    print "calculation %s mg/L NH3  values %s ° C , %s pH, %s PPT Salinity   \
+    print "calculation %s mg/L NH3  values %s DEG C , %s pH, %s PPT Salinity   \
     Pass  %s" % (accuteCalc,temp,pH,S,calculation)
     
 
